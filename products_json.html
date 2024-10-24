@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products JSON Example</title>
+    <style type="text/css">
+        body{
+            font-size: 18px;
+            background-color: #f8f9fa;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .json-container {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: left;
+            max-width: 600px;
+            margin: 20px auto;
+            white-space: pre-wrap; 
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Products JSON</h1>
+    <div class="json-container" id="jsonContainer"></div>
+
+    <script>
+        const products = [
+            {
+                "name": "Vintage T-shirt",
+                "description": "Tie-dye Grateful Dead T-shirt",
+                "price": "$35",
+                "categories": ["clothing", "vintage"]
+            },
+            {
+                "name": "Noise-Cancelling Headphones",
+                "description": "Wireless over-ear headphones with active noise cancellation",
+                "price": "$200",
+                "categories": ["electronics"]
+            },
+            {
+                "name": "Yoga Mat",
+                "description": "Non-slip yoga mat with extra cushioning",
+                "price": "$40",
+                "categories": ["sports", "wellness"]
+            },
+            {
+                "name": "Laptop Backpack",
+                "description": "Durable backpack with padded compartment for a 15-inch laptop",
+                "price": "$60",
+                "categories": ["clothing", "accessories"]
+            },
+            {
+                "name": "Wireless Earbuds",
+                "description": "Compact in-ear Bluetooth earbuds with charging case",
+                "price": "$120",
+                "categories": ["electronics", "wearables"]
+            },
+            {
+                "name": "Electric Kettle",
+                "description": "Stainless steel electric kettle with temperature control",
+                "price": "$45",
+                "categories": ["home", "appliances"]
+            },
+            {
+                "name": "Camping Tent",
+                "description": "Two-person waterproof tent with easy setup",
+                "price": "$120",
+                "categories": ["sports", "outdoors"]
+            },
+            {
+                "name": "Desk Lamp",
+                "description": "Adjustable LED desk lamp with USB charging port",
+                "price": "$35",
+                "categories": ["home", "office"]
+            }
+        ];
+
+        const jsonString = JSON.stringify(products, null, 4);
+        document.getElementById("jsonContainer").textContent = jsonString;
+    </script>
+
+</body>
+</html>
